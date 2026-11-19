@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
