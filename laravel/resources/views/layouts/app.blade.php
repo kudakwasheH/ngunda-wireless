@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') · {{ \App\Support\Settings::get('business.name') }}</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-icon.png') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nws.css') }}?v=2">
@@ -13,12 +14,15 @@
 @php($u = auth()->user())
 <nav class="navbar navbar-dark bg-nws d-lg-none px-3">
     <button class="btn btn-outline-light btn-sm" data-bs-toggle="offcanvas" data-bs-target="#sidebar"><i class="bi bi-list"></i></button>
-    <span class="navbar-brand mb-0 h6"><i class="bi bi-wifi"></i> {{ \App\Support\Settings::get('business.name') }}</span>
+    <a class="navbar-brand mb-0 d-flex align-items-center gap-2" href="{{ route('dashboard') }}">
+        <img src="{{ asset('images/logo-icon.png') }}" alt="Logo" width="28" height="28" class="rounded">
+        <span class="h6 mb-0">{{ \App\Support\Settings::get('business.name') }}</span>
+    </a>
 </nav>
 <div class="d-flex">
     <div class="offcanvas-lg offcanvas-start bg-nws text-white sidebar" tabindex="-1" id="sidebar">
         <div class="p-3 sidebar-brand d-none d-lg-flex align-items-center gap-2">
-            <span class="brand-icon"><i class="bi bi-wifi"></i></span>
+            <img src="{{ asset('images/logo-icon.png') }}" alt="Logo" width="36" height="36" class="rounded">
             <div>
                 <div class="h6 mb-0 fw-bold text-white">{{ \App\Support\Settings::get('business.name') }}</div>
                 <div class="sidebar-subtitle">Hotspot management</div>

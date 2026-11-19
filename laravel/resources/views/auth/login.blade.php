@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign in · {{ \App\Support\Settings::get('business.name') }}</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-icon.png') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nws.css') }}?v=2">
@@ -11,8 +12,8 @@
 <body class="bg-nws d-flex align-items-center min-vh-100">
 <div class="container" style="max-width: 420px">
     <div class="text-center text-white mb-4">
-        <div class="display-5"><i class="bi bi-wifi"></i></div>
-        <h1 class="h3">{{ \App\Support\Settings::get('business.name') }}</h1>
+        <img src="{{ asset('images/logo-square.png') }}" alt="Ngunda Wireless Logo" width="110" height="110" class="rounded-4 mb-3 shadow">
+        <h1 class="h3 fw-bold">{{ \App\Support\Settings::get('business.name') }}</h1>
         <p class="text-white-50">Administration</p>
     </div>
     <div class="card"><div class="card-body p-4">
